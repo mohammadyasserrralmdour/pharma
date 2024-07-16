@@ -1,4 +1,4 @@
-name: consultations_app
+name: pharma_app
 description: "A new Flutter project."
 
 publish_to: 'none'
@@ -28,7 +28,6 @@ dependencies:
   get_it: ^7.6.7
   logger: ^2.0.2+1
 
-  flutter_screenutil: ^5.9.0
   flutter_easyloading: ^3.0.5
   loading_animation_widget: ^1.2.0+4
   flutter_inset_box_shadow: ^1.0.8
@@ -36,13 +35,17 @@ dependencies:
   flutter_svg: ^2.0.9
   bottom_navy_bar: ^6.0.0
   flutter_launcher_icons: ^0.13.1
-  flutter_native_splash: ^2.4.0
   awesome_snackbar_content: ^0.1.3
   otp_text_field: ^1.1.3
   image_picker: ^1.1.2
   dropdown_button2: ^2.3.9
   multi_select_flutter: ^4.1.3
   google_sign_in: ^6.2.1
+  google_fonts: ^6.2.1
+  flutter_screenutil: ^5.9.3
+  font_awesome_flutter: ^10.7.0
+  pie_chart: ^5.4.0
+  flutter_native_splash: ^2.4.1
 
 dev_dependencies:
   flutter_test:
@@ -56,13 +59,12 @@ dev_dependencies:
 flutter_icons:
   android: true
   ios: true
-  image_path: "assets/images/app_icon.png"
+  image_path: "assets/images/luncher.png"
 
 flutter_native_splash:
-  color: "#150050"
-  image: assets/images/splash_screen.png
-  android_gravity: fill
-  fullscreen: true
+  color: "#ffffff"
+  image: assets/images/splash.png
+  fullscreen: false
 
 flutter:
 

@@ -1,4 +1,5 @@
-import 'package:consultations_app/features/main/domain/entities/sub_category_entity.dart';
+
+import 'package:pharma_app/features/main/domain/entities/sub_category_entity.dart';
 
 class SubCategoryModel extends SubCategory {
   const SubCategoryModel({

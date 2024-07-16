@@ -1,11 +1,11 @@
 import 'dart:convert';
 
-import 'package:consultations_app/core/constants/app_strings.dart';
-import 'package:consultations_app/core/enums/general_states.dart';
-import 'package:consultations_app/core/helpers/exception.dart';
-import 'package:consultations_app/core/helpers/failures.dart';
-import 'package:consultations_app/core/services/status_handler_service.dart';
-import 'package:consultations_app/injection_container.dart';
+import 'package:pharma_app/core/constants/app_strings.dart';
+import 'package:pharma_app/core/enums/general_states.dart';
+import 'package:pharma_app/core/helpers/exception.dart';
+import 'package:pharma_app/core/helpers/failures.dart';
+import 'package:pharma_app/core/services/status_handler_service.dart';
+import 'package:pharma_app/injection_container.dart';
 import 'package:dartz/dartz.dart';
 import 'package:http/http.dart';
 import 'package:logger/logger.dart';

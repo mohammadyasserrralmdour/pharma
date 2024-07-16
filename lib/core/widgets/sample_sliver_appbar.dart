@@ -1,9 +1,8 @@
-import 'package:consultations_app/core/constants/app_colors.dart';
-import 'package:consultations_app/core/widgets/primary_icon_button.dart';
-import 'package:consultations_app/core/widgets/primary_sliver_appbar.dart';
+import 'package:pharma_app/core/constants/app_colors.dart';
+import 'package:pharma_app/core/widgets/primary_icon_button.dart';
+import 'package:pharma_app/core/widgets/primary_sliver_appbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:go_router/go_router.dart';
 
 class SampleSliverAppbar extends StatelessWidget {
   final String title;
@@ -35,7 +34,7 @@ class SampleSliverAppbar extends StatelessWidget {
                     end: 5.h,
                   ),
                   onPressed: () {
-                    context.pop();
+                    //context.pop();
                   },
                 ),
           ),

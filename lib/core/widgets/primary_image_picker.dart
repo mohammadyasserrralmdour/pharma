@@ -1,11 +1,13 @@
 import 'dart:io';
 
-import 'package:consultations_app/core/constants/app_colors.dart';
-import 'package:consultations_app/core/constants/app_strings.dart';
-import 'package:consultations_app/core/helpers/pickers.dart';
-import 'package:consultations_app/core/widgets/primary_icon_button.dart';
+import 'package:pharma_app/core/constants/app_assets.dart';
+import 'package:pharma_app/core/constants/app_colors.dart';
+import 'package:pharma_app/core/constants/app_strings.dart';
+import 'package:pharma_app/core/helpers/pickers.dart';
+import 'package:pharma_app/core/widgets/primary_icon_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:image_picker/image_picker.dart';
 
 class PrimaryImagePicker extends StatefulWidget {
@@ -56,14 +58,16 @@ class _PrimaryImagePickerState extends State<PrimaryImagePicker> {
                 },
                 icon: Column(
                   children: [
-                    Container(
-                      padding: EdgeInsets.all(30.w),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(100),
-                        color: AppColors.primary20,
-                      ),
-                      child: const Icon(Icons.cloud_upload_sharp),
-                    ),
+                    SvgPicture.asset(
+                     "${AppAssets.rootSVGImages}/chose_image.svg"),
+                    // Container(
+                    //   padding: EdgeInsets.all(30.w),
+                    //   decoration: BoxDecoration(
+                    //     borderRadius: BorderRadius.circular(100),
+                    //     color: AppColors.primary20,
+                    //   ),
+                    //   child: const Icon(Icons.cloud_upload_sharp),
+                    // ),
                     SizedBox(
                       height: 8.h,
                     ),

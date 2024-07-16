@@ -1,11 +1,16 @@
-import 'package:consultations_app/core/services/api_service.dart';
-import 'package:consultations_app/core/services/bloc_observer_service.dart';
-import 'package:consultations_app/core/services/caching_service.dart';
-import 'package:consultations_app/core/services/network_info_service.dart';
-import 'package:consultations_app/core/services/router_service.dart';
-import 'package:consultations_app/core/services/status_handler_service.dart';
-import 'package:consultations_app/features/main/domain/usecases/get_home_data_use_case.dart';
-import 'package:consultations_app/features/main/presentation/cubits/main_cubit/main_cubit.dart';
+import 'package:pharma_app/core/services/api_service.dart';
+import 'package:pharma_app/core/services/bloc_observer_service.dart';
+import 'package:pharma_app/core/services/caching_service.dart';
+import 'package:pharma_app/core/services/network_info_service.dart';
+import 'package:pharma_app/core/services/router_service.dart';
+import 'package:pharma_app/core/services/status_handler_service.dart';
+import 'package:pharma_app/features/Auth/presentation/logic/login/cubit/login_cubit.dart';
+import 'package:pharma_app/features/Auth/presentation/logic/register/cubit/register_cubit.dart';
+import 'package:pharma_app/features/main/data/data_sources/main_remote_data_source.dart';
+import 'package:pharma_app/features/main/data/repository/main_repo_impl.dart';
+import 'package:pharma_app/features/main/domain/repository/main_repo.dart';
+import 'package:pharma_app/features/main/domain/usecases/get_home_data_use_case.dart';
+import 'package:pharma_app/features/main/presentation/cubits/main_cubit/main_cubit.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get_it/get_it.dart';
 import 'package:http/http.dart';
@@ -13,16 +18,15 @@ import 'package:internet_connection_checker/internet_connection_checker.dart';
 import 'package:logger/logger.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import 'features/main/data/data_sources/main_remote_data_source.dart';
-import 'features/main/data/repository/main_repo_impl.dart';
-import 'features/main/domain/repository/main_repo.dart';
+
 
 abstract class InjectionContainer {
   static GetIt getIt = GetIt.instance;
 
   static Future<void> initAppDependencies() async {
     await initCoreServices();
-    await initMainDependencies();
+   await initMainDependencies();
+    await initAuthDependenies();
   }
 
   static Future<void> initCoreServices() async {
@@ -64,8 +68,14 @@ abstract class InjectionContainer {
     );
   }
 
+  static Future<void> initAuthDependenies()async{
+    getIt.registerFactory<RegisterCubit>(() => RegisterCubit(),);
+    getIt.registerFactory<LoginCubit>(() => LoginCubit(),);
+
+  }
+
   static Future<void> initMainDependencies() async {
-    /// Data Sources
+   // DataSources
     GetIt.instance.registerLazySingleton<MainRemoteDataSource>(
       () => MainRemoteDataSourceImpl(
         apiService: getIt(),
@@ -93,4 +103,5 @@ abstract class InjectionContainer {
     /// Cubits and Blocs
     GetIt.instance.registerFactory(() => MainCubit());
   }
+
 }

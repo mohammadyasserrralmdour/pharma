@@ -1,9 +1,9 @@
 import 'package:bloc/bloc.dart';
-import 'package:consultations_app/core/enums/general_states.dart';
-import 'package:consultations_app/core/services/state_manager_service.dart';
-import 'package:consultations_app/features/main/domain/entities/home_data_entity.dart';
-import 'package:consultations_app/features/main/domain/usecases/get_home_data_use_case.dart';
-import 'package:consultations_app/injection_container.dart';
+import 'package:pharma_app/core/enums/general_states.dart';
+import 'package:pharma_app/core/services/state_manager_service.dart';
+import 'package:pharma_app/features/main/domain/entities/home_data_entity.dart';
+import 'package:pharma_app/features/main/domain/usecases/get_home_data_use_case.dart';
+import 'package:pharma_app/injection_container.dart';
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:logger/logger.dart';
@@ -16,7 +16,7 @@ class MainCubit extends Cubit<MainState> {
     initMain();
   }
 
-  /// Use Cases
+  
   final GetHomeDataUseCase getHomeDataUseCase = InjectionContainer.getIt();
   GeneralStates generalState = GeneralStates.init;
 

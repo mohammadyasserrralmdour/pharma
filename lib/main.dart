@@ -1,12 +1,10 @@
-import 'package:consultations_app/core/constants/app_colors.dart';
-import 'package:consultations_app/core/constants/app_themes.dart';
-import 'package:consultations_app/core/services/router_service.dart';
-import 'package:consultations_app/features/main/presentation/cubits/main_cubit/main_cubit.dart';
-import 'package:consultations_app/injection_container.dart';
+import 'package:pharma_app/core/constants/app_themes.dart';
+import 'package:pharma_app/core/services/router_service.dart';
+import 'package:pharma_app/features/main/presentation/cubits/main_cubit/main_cubit.dart';
+import 'package:pharma_app/injection_container.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 void main() async {
@@ -17,9 +15,9 @@ void main() async {
 Future<void> initSettings() async {
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setSystemUIOverlayStyle(
-    SystemUiOverlayStyle(
-      systemNavigationBarColor: SystemUiOverlayStyle.dark.systemNavigationBarColor,
-      statusBarColor: AppColors.white,
+    const SystemUiOverlayStyle(
+      systemNavigationBarColor: Color.fromARGB(0, 255, 255, 255),
+      statusBarColor: Color.fromARGB(0, 255, 255, 255),
       statusBarIconBrightness: Brightness.dark,
     ),
   );
@@ -45,15 +43,14 @@ class MyApp extends StatelessWidget {
       },
       builder: (_, __) => MultiBlocProvider(
         providers: [
-          BlocProvider(
-            create: (context) => InjectionContainer.getIt<MainCubit>(),
-          ),
+        BlocProvider(create: (context) => MainCubit(),)
         ],
         child: MaterialApp.router(
+         
           title: 'PMS App',
           debugShowCheckedModeBanner: false,
           routerConfig: InjectionContainer.getIt<RouterService>().router,
-          builder: EasyLoading.init(),
+          // builder:EasyLoading.init(),
           theme: AppThemes.themeEnglish,
         ),
       ),
@@ -61,7 +58,7 @@ class MyApp extends StatelessWidget {
   }
 }
 /*
-keytool -genkey -v -keystore C:\Users\Asus\AndroidStudioProjects\Flutter\current\consultations_app\android\app\debug-keystore.jks ^
+keytool -genkey -v -keystore C:\Users\Asus\AndroidStudioProjects\Flutter\current\pharma_app\android\app\debug-keystore.jks ^
         -storetype JKS -keyalg RSA -keysize 2048 -validity 10000 ^
         -alias debug
         osama$57475600

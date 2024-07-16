@@ -42,11 +42,11 @@ static void my_application_activate(GApplication *application) {
     if (use_header_bar) {
         GtkHeaderBar *header_bar = GTK_HEADER_BAR(gtk_header_bar_new());
         gtk_widget_show(GTK_WIDGET(header_bar));
-        gtk_header_bar_set_title(header_bar, "consultations_app");
+        gtk_header_bar_set_title(header_bar, "pharma_app");
         gtk_header_bar_set_show_close_button(header_bar, TRUE);
         gtk_window_set_titlebar(window, GTK_WIDGET(header_bar));
     } else {
-        gtk_window_set_title(window, "consultations_app");
+        gtk_window_set_title(window, "pharma_app");
     }
 
     gtk_window_set_default_size(window, 1280, 720);
@@ -86,8 +86,8 @@ my_application_local_command_line(GApplication *application, gchar ***arguments,
     return TRUE;
 }
 
-// Implements GObject::dispose.
-static void my_application_dispose(GObject *object) {
+// Implements gobject::dispose.
+static void my_application_dispose(gobject *object) {
     MyApplication * self = MY_APPLICATION(object);
     g_clear_pointer(&self->dart_entrypoint_arguments, g_strfreev);
     G_OBJECT_CLASS(my_application_parent_class)->dispose(object);

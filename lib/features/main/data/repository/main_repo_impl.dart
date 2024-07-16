@@ -1,11 +1,12 @@
-import 'package:consultations_app/core/helpers/failures.dart';
-import 'package:consultations_app/core/services/state_manager_service.dart';
-import 'package:consultations_app/features/main/data/data_sources/main_remote_data_source.dart';
-import 'package:consultations_app/features/main/domain/entities/home_data_entity.dart';
-import 'package:consultations_app/features/main/domain/repository/main_repo.dart';
-import 'package:consultations_app/injection_container.dart';
+import 'package:pharma_app/core/helpers/failures.dart';
+import 'package:pharma_app/core/services/state_manager_service.dart';
+import 'package:pharma_app/features/main/data/data_sources/main_remote_data_source.dart';
+import 'package:pharma_app/features/main/domain/entities/home_data_entity.dart';
+import 'package:pharma_app/features/main/domain/repository/main_repo.dart';
+import 'package:pharma_app/injection_container.dart';
 import 'package:dartz/dartz.dart';
 import 'package:logger/logger.dart';
+
 
 class MainRepoImpl implements MainRepo {
   final MainRemoteDataSource mainRemoteDataSource;

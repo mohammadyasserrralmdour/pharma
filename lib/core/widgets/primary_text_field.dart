@@ -1,16 +1,18 @@
-import 'package:consultations_app/core/constants/app_colors.dart';
+import 'package:pharma_app/core/constants/app_colors.dart';
 import 'package:flutter/cupertino.dart' show CupertinoIcons;
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class PrimaryTextField extends StatefulWidget {
-  final String labelText;
+  final String? labelText;
   final String? hintText;
   final bool isObscureText;
   final bool isTextArea;
   final bool isEnabled;
   final bool autofocus;
   final Widget? suffixIcon;
+  final Widget? prefix;
   final TextInputType inputType;
   final TextEditingController? controller;
   final TextInputAction textInputAction;
@@ -20,7 +22,7 @@ class PrimaryTextField extends StatefulWidget {
 
   const PrimaryTextField({
     super.key,
-    required this.labelText,
+    this.labelText,
     this.isObscureText = false,
     this.isTextArea = false,
     this.isEnabled = true,
@@ -29,6 +31,7 @@ class PrimaryTextField extends StatefulWidget {
     this.onTap,
     this.validator,
     this.suffixIcon,
+    this.prefix,
     this.textInputAction = TextInputAction.next,
     this.autofocus = false,
     this.hintText,
@@ -45,16 +48,17 @@ class _PrimaryTextFieldState extends State<PrimaryTextField> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: widget.padding ?? EdgeInsets.symmetric(horizontal: 20.w),
+      padding: widget.padding ?? EdgeInsets.symmetric(horizontal: 0.w),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            widget.labelText,
-            style: const TextStyle(
-              fontSize: 14,
-            ),
-          ),
+          Text(widget.labelText ?? "",
+              style: GoogleFonts.workSans(
+                textStyle: TextStyle(
+                    fontSize: 10.sp,
+                    color: AppColors.gray,
+                    fontWeight: FontWeight.w500),
+              )),
           SizedBox(
             height: 8.h,
           ),
@@ -72,11 +76,15 @@ class _PrimaryTextFieldState extends State<PrimaryTextField> {
               FocusManager.instance.primaryFocus?.unfocus();
             },
             decoration: InputDecoration(
+              fillColor: AppColors.primary20,
+              filled: true,
               hintText: widget.hintText,
-              hintStyle: TextStyle(
-                fontSize: 14,
-                color: AppColors.gray.withOpacity(0.5),
-              ),
+              prefixIcon: widget.prefix,
+              hintStyle: GoogleFonts.workSans(
+                  textStyle: TextStyle(
+                fontSize: 13.sp,
+           //   color: AppColors.primary10
+              )),
               errorMaxLines: 3,
               suffixIcon: widget.suffixIcon ??
                   (widget.isObscureText
@@ -101,7 +109,7 @@ class _PrimaryTextFieldState extends State<PrimaryTextField> {
                 borderRadius: BorderRadius.circular(8.r),
                 borderSide: const BorderSide(
                   width: 0.6,
-                  color: AppColors.gray,
+                  color: AppColors.primary20,
                 ),
               ),
               focusedBorder: OutlineInputBorder(

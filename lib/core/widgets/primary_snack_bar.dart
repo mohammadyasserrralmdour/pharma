@@ -1,5 +1,5 @@
 import 'package:awesome_snackbar_content/awesome_snackbar_content.dart';
-import 'package:consultations_app/core/constants/app_colors.dart';
+import 'package:pharma_app/core/constants/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class PrimarySnackBar {

@@ -2,7 +2,7 @@ class AppStrings {
   //-------------------------------------------
   // Auth Strings
   //-------------------------------------------
-  static const String topEx = 'Top EX';
+  static const String topEx = 'Pharma';
   static const String forConsultations = 'for consultations';
   static const String signInForFree = 'Sign in for free';
   static const String signUpForFree = 'Sign up for free';
@@ -31,7 +31,7 @@ class AppStrings {
   static const String yourProblem = 'Your Problem';
   static const String problemHint = 'describe what do you want';
   static const String aboutHint = 'describe yourself in some words';
-  static const String accountType = 'Account type';
+  static const String accountTypeContianer = 'Account type';
   static const String expert = 'Expert';
   static const String user = 'User';
   static const String gender = 'Gender';
@@ -93,7 +93,7 @@ class AppStrings {
   // Home Strings
   //-------------------------------------------
   static const String specialists = "Specialists";
-  static const String topExperts = "Top Experts";
+  static const String topExperts = "Pharma";
   static const String recommendedExperts = "Recommended Experts";
   static const String searchAboutExperts = "Search about experts";
   static const String noMoreAnyExpert = "No More Any Expert";
@@ -115,6 +115,12 @@ class AppStrings {
   static const String notifications = "Notifications";
   static const String myFavorite = "My Favorite";
   static const String help = "Help";
+  static const String drug = "Drugs";
+  static const String order = "Order";
+  static const String sales = "Sales";
+  static const String employee = "Employee";
+  static const String monitoring = "Monitoring";
+
 
   //-------------------------------------------
   // Failure Messages Strings

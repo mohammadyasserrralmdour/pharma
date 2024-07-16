@@ -1,7 +1,11 @@
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
-import 'package:consultations_app/core/constants/app_strings.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:pharma_app/core/constants/app_assets.dart';
+import 'package:pharma_app/core/constants/app_colors.dart';
+import 'package:pharma_app/core/constants/app_strings.dart';
+import 'package:pharma_app/core/constants/app_text_styles.dart';
 
 class BottomNavbar extends StatelessWidget {
   final int currentTab;
@@ -16,39 +20,60 @@ class BottomNavbar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BottomNavyBar(
-      itemCornerRadius: 15,
-      containerHeight: 65,
+      iconSize: 40,
+      itemCornerRadius: 15.r,
+      containerHeight: 65.h,
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       items: [
         BottomNavyBarItem(
-            icon: const Icon(CupertinoIcons.house),
-            title: const Text(
-              AppStrings.home,
+            // ignore: deprecated_member_use
+            icon: SvgPicture.asset("${AppAssets.rootSVGIcons}/drugs.svg",fit: BoxFit.fill,height:25.h.h,width:25.h,
+                // ignore: deprecated_member_use
+                color: AppColors.primary),
+            title: Text(
+              AppStrings.drug,
+              style: AppTextStyles.workSans(13, FontWeight.w700,
+                  color: AppColors.primary),
             ),
             textAlign: TextAlign.center),
         BottomNavyBarItem(
-          icon: const Icon(CupertinoIcons.calendar),
-          title: const FittedBox(
-            child: Text(
-              AppStrings.appointment,
-            ),
+          // ignore: deprecated_member_use
+          icon:  SvgPicture.asset("${AppAssets.rootSVGIcons}/monitoring.svg",fit: BoxFit.fill,height:25.h.h,width:25.h,
+              // ignore: deprecated_member_use
+              color: AppColors.primary),
+          //  SvgPicture.asset(table_chart_outlined
+            
+          //   "${AppAssets.rootSVGIcons}/sales.svg",fit: BoxFit.fill,height:25.h.h,width:25.h,
+          //   // ignore: deprecated_member_use
+          //   color: AppColors.primary,
+          // ),
+          title: Text(
+            AppStrings.sales,
+            style: AppTextStyles.workSans(13, FontWeight.w700,
+                color: AppColors.primary),
           ),
-          textAlign: TextAlign.center,
+          //textAlign: TextAlign.center,
         ),
         BottomNavyBarItem(
-          icon: const Icon(CupertinoIcons.list_bullet_below_rectangle),
-          title: const Text(
-            AppStrings.history,
+          // ignore: deprecated_member_use
+          icon: SvgPicture.asset("${AppAssets.rootSVGIcons}/employees.svg",fit: BoxFit.fill,height:25.h.h,width:25.h,
+              // ignore: deprecated_member_use
+              color: AppColors.primary),
+          title: Text(
+            AppStrings.employee,
+            style: AppTextStyles.workSans(13, FontWeight.w700,
+                color: AppColors.primary),
           ),
-          textAlign: TextAlign.center,
+          textAlign: TextAlign.left,
         ),
         BottomNavyBarItem(
-          icon: const Icon(
-            Icons.person_sharp,
-            size: 25,
-          ),
-          title: const Text(
-            AppStrings.profile,
+          // ignore: deprecated_member_use
+          icon:Icon(Icons.table_chart_outlined,size: 25.dm,color: AppColors.primary,),
+          
+          title: Text(
+            AppStrings.monitoring,
+            style: AppTextStyles.workSans(13, FontWeight.w700,
+                color: AppColors.primary),
           ),
           textAlign: TextAlign.center,
         ),

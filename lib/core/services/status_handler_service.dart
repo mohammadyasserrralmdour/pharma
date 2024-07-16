@@ -1,5 +1,5 @@
-import 'package:consultations_app/core/constants/app_colors.dart';
-import 'package:consultations_app/core/constants/app_strings.dart';
+import 'package:pharma_app/core/constants/app_colors.dart';
+import 'package:pharma_app/core/constants/app_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 

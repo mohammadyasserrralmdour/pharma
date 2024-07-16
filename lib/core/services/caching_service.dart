@@ -1,4 +1,4 @@
-import 'package:consultations_app/injection_container.dart';
+import 'package:pharma_app/injection_container.dart';
 import 'package:dartz/dartz.dart';
 import 'package:logger/logger.dart';
 import 'package:shared_preferences/shared_preferences.dart';

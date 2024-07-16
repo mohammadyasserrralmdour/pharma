@@ -1,4 +1,4 @@
-# consultations_app
+# pharma_app
 
 A new Flutter project.
 

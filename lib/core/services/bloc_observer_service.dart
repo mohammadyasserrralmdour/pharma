@@ -1,5 +1,5 @@
 import 'package:bloc/bloc.dart';
-import 'package:consultations_app/injection_container.dart';
+import 'package:pharma_app/injection_container.dart';
 import 'package:logger/logger.dart';
 
 class BlocObserverService extends BlocObserver {

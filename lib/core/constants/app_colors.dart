@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 
 class AppColors {
-  // Primary and Secondary Colors
+  
   static const MaterialColor materialPrimary = Colors.blue;
+  static const Color primaryButton = Color(0xFF0929B1);
   static const Color primary = Color(0xFF2972FE);
   static const Color primary10 = Color(0xFFA6E5FD);
-  static const Color primary20 = Color(0xFFF1F7FC);
-
+  static const Color primary20 = Color(0xFFECF4FE);
+  static const Color primary30 = Color(0xFFFAFCFF);
   //-------------------------------------------
 
   // Status Colors
@@ -24,5 +25,5 @@ class AppColors {
   static const Color amber = Colors.amber;
   static const Color gray = Colors.grey;
   static const Color grayAccent = Color(0xFFE1DAD6);
-////-------------------------------------------
+////------------------------------------------- 
 }

@@ -25,7 +25,6 @@ mixin _$MainState {
     required TResult Function(String message) error,
   }) =>
       throw _privateConstructorUsedError;
-
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
@@ -45,7 +44,6 @@ mixin _$MainState {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
-
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
@@ -55,7 +53,6 @@ mixin _$MainState {
     required TResult Function(_Error value) error,
   }) =>
       throw _privateConstructorUsedError;
-
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
@@ -79,29 +76,35 @@ mixin _$MainState {
 
 /// @nodoc
 abstract class $MainStateCopyWith<$Res> {
-  factory $MainStateCopyWith(MainState value, $Res Function(MainState) then) = _$MainStateCopyWithImpl<$Res, MainState>;
+  factory $MainStateCopyWith(MainState value, $Res Function(MainState) then) =
+      _$MainStateCopyWithImpl<$Res, MainState>;
 }
 
 /// @nodoc
-class _$MainStateCopyWithImpl<$Res, $Val extends MainState> implements $MainStateCopyWith<$Res> {
+class _$MainStateCopyWithImpl<$Res, $Val extends MainState>
+    implements $MainStateCopyWith<$Res> {
   _$MainStateCopyWithImpl(this._value, this._then);
 
-// ignore: unused_field
+  // ignore: unused_field
   final $Val _value;
-// ignore: unused_field
+  // ignore: unused_field
   final $Res Function($Val) _then;
 }
 
 /// @nodoc
 abstract class _$$InitialImplCopyWith<$Res> {
-  factory _$$InitialImplCopyWith(_$InitialImpl value, $Res Function(_$InitialImpl) then) =
+  factory _$$InitialImplCopyWith(
+          _$InitialImpl value, $Res Function(_$InitialImpl) then) =
       __$$InitialImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$InitialImplCopyWithImpl<$Res> extends _$MainStateCopyWithImpl<$Res, _$InitialImpl>
+class __$$InitialImplCopyWithImpl<$Res>
+    extends _$MainStateCopyWithImpl<$Res, _$InitialImpl>
     implements _$$InitialImplCopyWith<$Res> {
-  __$$InitialImplCopyWithImpl(_$InitialImpl _value, $Res Function(_$InitialImpl) _then) : super(_value, _then);
+  __$$InitialImplCopyWithImpl(
+      _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -116,7 +119,8 @@ class _$InitialImpl implements _Initial {
 
   @override
   bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType && other is _$InitialImpl);
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$InitialImpl);
   }
 
   @override
@@ -209,14 +213,18 @@ abstract class _Initial implements MainState {
 
 /// @nodoc
 abstract class _$$LoadingImplCopyWith<$Res> {
-  factory _$$LoadingImplCopyWith(_$LoadingImpl value, $Res Function(_$LoadingImpl) then) =
+  factory _$$LoadingImplCopyWith(
+          _$LoadingImpl value, $Res Function(_$LoadingImpl) then) =
       __$$LoadingImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$LoadingImplCopyWithImpl<$Res> extends _$MainStateCopyWithImpl<$Res, _$LoadingImpl>
+class __$$LoadingImplCopyWithImpl<$Res>
+    extends _$MainStateCopyWithImpl<$Res, _$LoadingImpl>
     implements _$$LoadingImplCopyWith<$Res> {
-  __$$LoadingImplCopyWithImpl(_$LoadingImpl _value, $Res Function(_$LoadingImpl) _then) : super(_value, _then);
+  __$$LoadingImplCopyWithImpl(
+      _$LoadingImpl _value, $Res Function(_$LoadingImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -231,7 +239,8 @@ class _$LoadingImpl implements _Loading {
 
   @override
   bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType && other is _$LoadingImpl);
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$LoadingImpl);
   }
 
   @override
@@ -324,16 +333,20 @@ abstract class _Loading implements MainState {
 
 /// @nodoc
 abstract class _$$LoadedImplCopyWith<$Res> {
-  factory _$$LoadedImplCopyWith(_$LoadedImpl value, $Res Function(_$LoadedImpl) then) =
+  factory _$$LoadedImplCopyWith(
+          _$LoadedImpl value, $Res Function(_$LoadedImpl) then) =
       __$$LoadedImplCopyWithImpl<$Res>;
   @useResult
   $Res call({HomeData homeData});
 }
 
 /// @nodoc
-class __$$LoadedImplCopyWithImpl<$Res> extends _$MainStateCopyWithImpl<$Res, _$LoadedImpl>
+class __$$LoadedImplCopyWithImpl<$Res>
+    extends _$MainStateCopyWithImpl<$Res, _$LoadedImpl>
     implements _$$LoadedImplCopyWith<$Res> {
-  __$$LoadedImplCopyWithImpl(_$LoadedImpl _value, $Res Function(_$LoadedImpl) _then) : super(_value, _then);
+  __$$LoadedImplCopyWithImpl(
+      _$LoadedImpl _value, $Res Function(_$LoadedImpl) _then)
+      : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
@@ -367,7 +380,8 @@ class _$LoadedImpl implements _Loaded {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$LoadedImpl &&
-            (identical(other.homeData, homeData) || other.homeData == homeData));
+            (identical(other.homeData, homeData) ||
+                other.homeData == homeData));
   }
 
   @override
@@ -376,7 +390,8 @@ class _$LoadedImpl implements _Loaded {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$LoadedImplCopyWith<_$LoadedImpl> get copyWith => __$$LoadedImplCopyWithImpl<_$LoadedImpl>(this, _$identity);
+  _$$LoadedImplCopyWith<_$LoadedImpl> get copyWith =>
+      __$$LoadedImplCopyWithImpl<_$LoadedImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -464,21 +479,25 @@ abstract class _Loaded implements MainState {
 
   HomeData get homeData;
   @JsonKey(ignore: true)
-  _$$LoadedImplCopyWith<_$LoadedImpl> get copyWith => throw _privateConstructorUsedError;
+  _$$LoadedImplCopyWith<_$LoadedImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$ChangeTabSuccessImplCopyWith<$Res> {
-  factory _$$ChangeTabSuccessImplCopyWith(_$ChangeTabSuccessImpl value, $Res Function(_$ChangeTabSuccessImpl) then) =
+  factory _$$ChangeTabSuccessImplCopyWith(_$ChangeTabSuccessImpl value,
+          $Res Function(_$ChangeTabSuccessImpl) then) =
       __$$ChangeTabSuccessImplCopyWithImpl<$Res>;
   @useResult
   $Res call({HomeData? homeData});
 }
 
 /// @nodoc
-class __$$ChangeTabSuccessImplCopyWithImpl<$Res> extends _$MainStateCopyWithImpl<$Res, _$ChangeTabSuccessImpl>
+class __$$ChangeTabSuccessImplCopyWithImpl<$Res>
+    extends _$MainStateCopyWithImpl<$Res, _$ChangeTabSuccessImpl>
     implements _$$ChangeTabSuccessImplCopyWith<$Res> {
-  __$$ChangeTabSuccessImplCopyWithImpl(_$ChangeTabSuccessImpl _value, $Res Function(_$ChangeTabSuccessImpl) _then)
+  __$$ChangeTabSuccessImplCopyWithImpl(_$ChangeTabSuccessImpl _value,
+      $Res Function(_$ChangeTabSuccessImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -513,7 +532,8 @@ class _$ChangeTabSuccessImpl implements _ChangeTabSuccess {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ChangeTabSuccessImpl &&
-            (identical(other.homeData, homeData) || other.homeData == homeData));
+            (identical(other.homeData, homeData) ||
+                other.homeData == homeData));
   }
 
   @override
@@ -523,7 +543,8 @@ class _$ChangeTabSuccessImpl implements _ChangeTabSuccess {
   @override
   @pragma('vm:prefer-inline')
   _$$ChangeTabSuccessImplCopyWith<_$ChangeTabSuccessImpl> get copyWith =>
-      __$$ChangeTabSuccessImplCopyWithImpl<_$ChangeTabSuccessImpl>(this, _$identity);
+      __$$ChangeTabSuccessImplCopyWithImpl<_$ChangeTabSuccessImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -607,24 +628,31 @@ class _$ChangeTabSuccessImpl implements _ChangeTabSuccess {
 }
 
 abstract class _ChangeTabSuccess implements MainState {
-  const factory _ChangeTabSuccess(final HomeData? homeData) = _$ChangeTabSuccessImpl;
+  const factory _ChangeTabSuccess(final HomeData? homeData) =
+      _$ChangeTabSuccessImpl;
 
   HomeData? get homeData;
   @JsonKey(ignore: true)
-  _$$ChangeTabSuccessImplCopyWith<_$ChangeTabSuccessImpl> get copyWith => throw _privateConstructorUsedError;
+  _$$ChangeTabSuccessImplCopyWith<_$ChangeTabSuccessImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$ErrorImplCopyWith<$Res> {
-  factory _$$ErrorImplCopyWith(_$ErrorImpl value, $Res Function(_$ErrorImpl) then) = __$$ErrorImplCopyWithImpl<$Res>;
+  factory _$$ErrorImplCopyWith(
+          _$ErrorImpl value, $Res Function(_$ErrorImpl) then) =
+      __$$ErrorImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String message});
 }
 
 /// @nodoc
-class __$$ErrorImplCopyWithImpl<$Res> extends _$MainStateCopyWithImpl<$Res, _$ErrorImpl>
+class __$$ErrorImplCopyWithImpl<$Res>
+    extends _$MainStateCopyWithImpl<$Res, _$ErrorImpl>
     implements _$$ErrorImplCopyWith<$Res> {
-  __$$ErrorImplCopyWithImpl(_$ErrorImpl _value, $Res Function(_$ErrorImpl) _then) : super(_value, _then);
+  __$$ErrorImplCopyWithImpl(
+      _$ErrorImpl _value, $Res Function(_$ErrorImpl) _then)
+      : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
@@ -667,7 +695,8 @@ class _$ErrorImpl implements _Error {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith => __$$ErrorImplCopyWithImpl<_$ErrorImpl>(this, _$identity);
+  _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith =>
+      __$$ErrorImplCopyWithImpl<_$ErrorImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -755,5 +784,6 @@ abstract class _Error implements MainState {
 
   String get message;
   @JsonKey(ignore: true)
-  _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith => throw _privateConstructorUsedError;
+  _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
