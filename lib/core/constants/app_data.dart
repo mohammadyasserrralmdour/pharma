@@ -55,7 +55,7 @@ Map listdataAuthHeadScreen = {
     buttonname: " register",
     image: "${AppAssets.rootSVGImages}/login.svg",
     function: (BuildContext context) =>
-        GoRouter.of(context).push(AppRoutes.authRegeisterScreen),
+        GoRouter.of(context).pop(),
     counter: 0,
   ),
   "notification": [],

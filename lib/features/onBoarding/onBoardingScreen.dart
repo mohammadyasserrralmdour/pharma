@@ -5,7 +5,7 @@ import 'package:pharma_app/core/constants/app_text_styles.dart';
 import 'package:pharma_app/core/helpers/clipper.dart';
 import 'package:pharma_app/core/widgets/primary_button.dart';
 import 'package:pharma_app/core/widgets/vertical_and_horizantail_space.dart';
-import 'package:pharma_app/features/Auth/presentation/widget/Auth_indecator.dart';
+import 'package:pharma_app/features/Auth/presentation/widget/auth_indecator.dart';
 import 'package:pharma_app/features/onBoarding/widget/OnBoardingTitleText.dart';
 import 'package:pharma_app/features/onBoarding/widget/OnBoardingbodtText.dart';
 import 'package:flutter/material.dart';

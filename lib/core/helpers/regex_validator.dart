@@ -17,9 +17,17 @@ abstract class RegexValidator {
     return null;
   }
 
-  static String? validateName(String? value) {
+  static String? validateFirstName(String? value) {
     if (value == null || value.isEmpty) {
-      return AppStrings.nameIsRequired;
+      return AppStrings.firstNameIsRequired;
+    } else if (!RegExp(nameRegex).hasMatch(value)) {
+      return AppStrings.theNameIsNotValid;
+    }
+    return null;
+  }
+  static String? validateSecondName(String? value) {
+    if (value == null || value.isEmpty) {
+      return AppStrings.secondNameIsRequired;
     } else if (!RegExp(nameRegex).hasMatch(value)) {
       return AppStrings.theNameIsNotValid;
     }

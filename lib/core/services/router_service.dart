@@ -1,14 +1,18 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 import 'package:pharma_app/core/constants/app_keys.dart';
 import 'package:pharma_app/core/constants/app_routes.dart';
 import 'package:pharma_app/core/services/caching_service.dart';
-import 'package:pharma_app/features/Auth/presentation/logic/register/cubit/register_cubit.dart';
-import 'package:pharma_app/features/Auth/presentation/screen/auth_account.dart';
-import 'package:pharma_app/features/Auth/presentation/screen/auth_forget.dart';
-import 'package:pharma_app/features/Auth/presentation/screen/auth_info.dart';
-import 'package:pharma_app/features/Auth/presentation/screen/auth_login.dart';
-import 'package:pharma_app/features/Auth/presentation/screen/auth_regeister.dart';
-import 'package:pharma_app/features/Auth/presentation/screen/auth_reset.dart';
-import 'package:pharma_app/features/Auth/presentation/screen/auth_verify.dart';
+import 'package:pharma_app/features/Auth/presentation/screen/forget/auth_forget_screen.dart';
+import 'package:pharma_app/features/Auth/presentation/screen/login/auth_login_screen.dart';
+import 'package:pharma_app/features/Auth/presentation/screen/login/cubit/login_cubit.dart';
+import 'package:pharma_app/features/Auth/presentation/screen/register/auth_regeister_screen.dart';
+import 'package:pharma_app/features/Auth/presentation/screen/register/cubit/registerr_cubit.dart';
+import 'package:pharma_app/features/Auth/presentation/screen/reset/auth_reset_screen.dart';
+import 'package:pharma_app/features/Auth/presentation/screen/reset/cubit/reset_cubit.dart';
+import 'package:pharma_app/features/Auth/presentation/screen/verify/auth_verify_screen.dart';
+import 'package:pharma_app/features/Auth/presentation/screen/verify/cubit/verify_cubit.dart';
 import 'package:pharma_app/features/main/presentation/screens/main_screen.dart';
 import 'package:pharma_app/features/onBoarding/onBoardingScreen.dart';
 import 'package:pharma_app/features/pharmacy/features/Drugs/presentation/screen/drug_batch_screen.dart';
@@ -37,9 +41,10 @@ import 'package:pharma_app/features/pharmacy/features/order/presentation/screen/
 import 'package:pharma_app/features/pharmacy/features/order/presentation/screen/order_send_screen.dart';
 import 'package:pharma_app/features/pharmacy/features/order/presentation/screen/orders_type_screen.dart';
 import 'package:pharma_app/features/pharmacy/pharmacyScreen.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:go_router/go_router.dart';
+import 'package:pharma_app/injection_container.dart';
+
+import '../../features/Auth/domain/usescase/auth_reset_password_usescase.dart';
+import '../../features/Auth/presentation/screen/inforamtions/auth_info_screen.dart';
 
 class RouterService {
   final CacheService _cacheService;
@@ -103,25 +108,9 @@ class RouterService {
           path: AppRoutes.authRegeisterScreen,
           pageBuilder: (context, state) => CustomTransitionPage(
             key: state.pageKey,
-            child: const AuthRegeisterScreen(),
-            transitionsBuilder:
-                (context, animation, secondaryAnimation, child) {
-              final tween = Tween(begin: const Offset(0, 1), end: Offset.zero);
-              return SlideTransition(
-                position: animation.drive(tween),
-                child: child,
-              );
-            },
-          ),
-        ),
-        // AuthVerify
-        GoRoute(
-          path: AppRoutes.authVerifyScreen,
-          pageBuilder: (context, state) => CustomTransitionPage(
-            key: state.pageKey,
-            child: BlocProvider(
-              create: (context) => RegisterCubit(),
-              child: const AuthVerifyScreen(),
+            child: BlocProvider<RegisterrCubit>(
+              create: (context) => InjectionContainer.getIt<RegisterrCubit>(),
+              child: const AuthRegeisterScreen(),
             ),
             transitionsBuilder:
                 (context, animation, secondaryAnimation, child) {
@@ -133,6 +122,31 @@ class RouterService {
             },
           ),
         ),
+
+        // AuthVerify
+        GoRoute(
+            path: AppRoutes.authVerifyScreen,
+            pageBuilder: (context, state) {
+              final String email = state.extra as String;
+              return CustomTransitionPage(
+                key: state.pageKey,
+                child: BlocProvider(
+                  create: (context) => InjectionContainer.getIt<VerifyCubit>(),
+                  child: AuthVerifyScreen(
+                    email: email,
+                  ),
+                ),
+                transitionsBuilder:
+                    (context, animation, secondaryAnimation, child) {
+                  final tween =
+                      Tween(begin: const Offset(0, 1), end: Offset.zero);
+                  return SlideTransition(
+                    position: animation.drive(tween),
+                    child: child,
+                  );
+                },
+              );
+            }),
         // AuthInfo
         GoRoute(
           path: AppRoutes.authInfoScreen,
@@ -149,31 +163,16 @@ class RouterService {
             },
           ),
         ),
-        // AuthAccount
-        GoRoute(
-          path: AppRoutes.authAccountScreen,
-          pageBuilder: (context, state) => CustomTransitionPage(
-            key: state.pageKey,
-            child: BlocProvider(
-              create: (context) => RegisterCubit(),
-              child: const AuthAccountScreen(),
-            ),
-            transitionsBuilder:
-                (context, animation, secondaryAnimation, child) {
-              final tween = Tween(begin: const Offset(0, 1), end: Offset.zero);
-              return SlideTransition(
-                position: animation.drive(tween),
-                child: child,
-              );
-            },
-          ),
-        ),
+
         //  AuthLogin
         GoRoute(
           path: AppRoutes.authLoginScreen,
           pageBuilder: (context, state) => CustomTransitionPage(
             key: state.pageKey,
-            child: const AuthLoginScreen(),
+            child: BlocProvider(
+              create: (context) => InjectionContainer.getIt<LoginCubit>(),
+              child: const AuthLoginScreen(),
+            ),
             transitionsBuilder:
                 (context, animation, secondaryAnimation, child) {
               final tween = Tween(begin: const Offset(0, 1), end: Offset.zero);
@@ -205,7 +204,11 @@ class RouterService {
           path: AppRoutes.authResetScreen,
           pageBuilder: (context, state) => CustomTransitionPage(
             key: state.pageKey,
-            child: const AuthResetScreen(),
+            child: BlocProvider(
+              create: (context) => ResetCubit(
+                  InjectionContainer.getIt<AuthResetPasswordUsescase>()),
+              child: const AuthResetScreen(),
+            ),
             transitionsBuilder:
                 (context, animation, secondaryAnimation, child) {
               final tween = Tween(begin: const Offset(0, 1), end: Offset.zero);
@@ -448,13 +451,12 @@ class RouterService {
           ),
         ),
 
-
         //Sales Customers Details
         GoRoute(
           path: AppRoutes.salesDailyScreen,
           pageBuilder: (context, state) => CustomTransitionPage(
             key: state.pageKey,
-            child:  SalesDailyScreen(),
+            child: SalesDailyScreen(),
             transitionsBuilder:
                 (context, animation, secondaryAnimation, child) {
               final tween = Tween(begin: const Offset(0, 1), end: Offset.zero);
@@ -466,11 +468,11 @@ class RouterService {
           ),
         ),
         //Sales Invoices Customers
-         GoRoute(
+        GoRoute(
           path: AppRoutes.salesInvoicesCustomersScreen,
           pageBuilder: (context, state) => CustomTransitionPage(
             key: state.pageKey,
-            child:  SalesInvoicesCustomersScreen(),
+            child: SalesInvoicesCustomersScreen(),
             transitionsBuilder:
                 (context, animation, secondaryAnimation, child) {
               final tween = Tween(begin: const Offset(0, 1), end: Offset.zero);
@@ -486,7 +488,7 @@ class RouterService {
           path: AppRoutes.salesInvoicesDailyScreen,
           pageBuilder: (context, state) => CustomTransitionPage(
             key: state.pageKey,
-            child:  SalesInvoicesDailyScreen(),
+            child: SalesInvoicesDailyScreen(),
             transitionsBuilder:
                 (context, animation, secondaryAnimation, child) {
               final tween = Tween(begin: const Offset(0, 1), end: Offset.zero);
@@ -497,12 +499,12 @@ class RouterService {
             },
           ),
         ),
-        //Sales Customers 
+        //Sales Customers
         GoRoute(
           path: AppRoutes.salesCustomersScreen,
           pageBuilder: (context, state) => CustomTransitionPage(
             key: state.pageKey,
-            child:  SalesCustomersScreen(),
+            child: SalesCustomersScreen(),
             transitionsBuilder:
                 (context, animation, secondaryAnimation, child) {
               final tween = Tween(begin: const Offset(0, 1), end: Offset.zero);
@@ -545,7 +547,6 @@ class RouterService {
             },
           ),
         ),
-
 
         //-------------------------------------------
         // Employee

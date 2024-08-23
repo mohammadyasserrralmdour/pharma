@@ -144,7 +144,8 @@ class AppStrings {
   //-------------------------------------------
   static const String emailIsRequired = 'Email is required';
   static const String theEmailIsNotValid = 'The email is not valid';
-  static const String nameIsRequired = 'Name is required';
+  static const String firstNameIsRequired = 'first name is required';
+  static const String secondNameIsRequired = 'second name is required';
   static const String theNameIsNotValid = 'The name is not valid';
   static const String thisFieldIsRequired = 'This field is required';
   static const String itIsNotNumber = "it isn't number";

@@ -74,3 +74,8 @@ flutter:
     - assets/images/
     - assets/svgs/icons/
     - assets/svgs/images/
+
+  fonts:
+    - family: WorkSans
+      fonts:
+        - asset: assets/fonts/WorkSans-VariableFont_wght.ttf

@@ -1,11 +1,11 @@
 import 'dart:convert';
 
+import 'package:http/http.dart' as http;
+import 'package:logger/logger.dart';
 import 'package:pharma_app/core/constants/app_endpoints.dart';
 import 'package:pharma_app/core/services/network_info_service.dart';
 import 'package:pharma_app/core/services/state_manager_service.dart';
 import 'package:pharma_app/injection_container.dart';
-import 'package:http/http.dart' as http;
-import 'package:logger/logger.dart';
 
 abstract class ApiService {
   Future<Map<String, dynamic>> get({
@@ -39,6 +39,8 @@ abstract class ApiService {
     Map<String, String>? headers,
   });
 }
+
+
 
 class ApiServiceImpl extends ApiService {
   final http.Client client;
@@ -99,17 +101,19 @@ class ApiServiceImpl extends ApiService {
       // throw OfflineException();
       // }
       await Future.delayed(const Duration(seconds: 3));
+     // String postdata=json.encode(data);
       final response = await client.post(
         Uri.http(
-          AppEndpoints.baseUrl,
+          AppEndpoints.baseUrl+
           subUrl,
         ),
         body: data,
         headers: headers,
       );
       StateManagerService.getExceptionStatusCode(response);
+
       InjectionContainer.getIt<Logger>().w(
-        'End `post` `$baseUrl$subUrl` |ApiServiceImpl| url: `$baseUrl$subUrl` response: ${json.decode(response.body)}',
+        'End `post` `$baseUrl$subUrl` |ApiServiceImpl| url: `$baseUrl$subUrl`    response: ${json.decode(response.body)}',
       );
       return Future.value(json.decode(response.body));
     } catch (e, s) {
