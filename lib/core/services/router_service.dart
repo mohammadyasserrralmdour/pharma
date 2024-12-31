@@ -15,36 +15,36 @@ import 'package:pharma_app/features/Auth/presentation/screen/verify/auth_verify_
 import 'package:pharma_app/features/Auth/presentation/screen/verify/cubit/verify_cubit.dart';
 import 'package:pharma_app/features/main/presentation/screens/main_screen.dart';
 import 'package:pharma_app/features/onBoarding/onBoardingScreen.dart';
-import 'package:pharma_app/features/pharmacy/features/Drugs/presentation/screen/drug_batch_screen.dart';
-import 'package:pharma_app/features/pharmacy/features/Drugs/presentation/screen/drug_deatailes_screen.dart';
-import 'package:pharma_app/features/pharmacy/features/Drugs/presentation/screen/drug_home_screen.dart';
-import 'package:pharma_app/features/pharmacy/features/Drugs/presentation/screen/drug_types_screen.dart';
-import 'package:pharma_app/features/pharmacy/features/Employees/screen/employee_create_screen.dart';
-import 'package:pharma_app/features/pharmacy/features/Employees/screen/employee_home_screen.dart';
-import 'package:pharma_app/features/pharmacy/features/Employees/screen/employee_information_screen.dart';
-import 'package:pharma_app/features/pharmacy/features/Employees/screen/employee_personal_screen.dart';
-import 'package:pharma_app/features/pharmacy/features/Employees/screen/employee_roles_screen.dart';
-import 'package:pharma_app/features/pharmacy/features/Sales/presentation/screen/sales_all_customers_screen.dart';
-import 'package:pharma_app/features/pharmacy/features/Sales/presentation/screen/sales_customer_informations_screen.dart';
-import 'package:pharma_app/features/pharmacy/features/Sales/presentation/screen/sales_customers_screen.dart';
-import 'package:pharma_app/features/pharmacy/features/Sales/presentation/screen/sales_daily_screen.dart';
-import 'package:pharma_app/features/pharmacy/features/Sales/presentation/screen/sales_home_screen.dart';
-import 'package:pharma_app/features/pharmacy/features/Sales/presentation/screen/sales_invoices_customers_screen.dart';
-import 'package:pharma_app/features/pharmacy/features/Sales/presentation/screen/sales_invoices_daily_screen.dart';
-import 'package:pharma_app/features/pharmacy/features/mointoring/screen/monitoring_home_screen.dart';
-import 'package:pharma_app/features/pharmacy/features/mointoring/screen/monitoring_subaction_screen.dart';
-import 'package:pharma_app/features/pharmacy/features/order/presentation/logic/cubit/order_cubit.dart';
-import 'package:pharma_app/features/pharmacy/features/order/presentation/screen/order_create_screen.dart';
-import 'package:pharma_app/features/pharmacy/features/order/presentation/screen/order_home_screen.dart';
-import 'package:pharma_app/features/pharmacy/features/order/presentation/screen/order_receive_screen.dart';
-import 'package:pharma_app/features/pharmacy/features/order/presentation/screen/order_reposatory_screen.dart';
-import 'package:pharma_app/features/pharmacy/features/order/presentation/screen/order_send_screen.dart';
-import 'package:pharma_app/features/pharmacy/features/order/presentation/screen/orders_type_screen.dart';
-import 'package:pharma_app/features/pharmacy/pharmacyScreen.dart';
 import 'package:pharma_app/injection_container.dart';
 
 import '../../features/Auth/domain/usescase/auth_reset_password_usescase.dart';
 import '../../features/Auth/presentation/screen/inforamtions/auth_info_screen.dart';
+import '../../features/Drugs/presentation/screen/drug_batch_screen.dart';
+import '../../features/Drugs/presentation/screen/drug_deatailes_screen.dart';
+import '../../features/Drugs/presentation/screen/drug_home_screen.dart';
+import '../../features/Drugs/presentation/screen/drug_types_screen.dart';
+import '../../features/Employees/screen/employee_create_screen.dart';
+import '../../features/Employees/screen/employee_home_screen.dart';
+import '../../features/Employees/screen/employee_information_screen.dart';
+import '../../features/Employees/screen/employee_personal_screen.dart';
+import '../../features/Employees/screen/employee_roles_screen.dart';
+import '../../features/Sales/presentation/screen/sales_all_customers_screen.dart';
+import '../../features/Sales/presentation/screen/sales_customer_informations_screen.dart';
+import '../../features/Sales/presentation/screen/sales_customers_screen.dart';
+import '../../features/Sales/presentation/screen/sales_daily_screen.dart';
+import '../../features/Sales/presentation/screen/sales_home_screen.dart';
+import '../../features/Sales/presentation/screen/sales_invoices_customers_screen.dart';
+import '../../features/Sales/presentation/screen/sales_invoices_daily_screen.dart';
+import '../../features/mointoring/screen/monitoring_home_screen.dart';
+import '../../features/mointoring/screen/monitoring_subaction_screen.dart';
+import '../../features/order/presentation/logic/cubit/order_cubit.dart';
+import '../../features/order/presentation/screen/order_create_screen.dart';
+import '../../features/order/presentation/screen/order_home_screen.dart';
+import '../../features/order/presentation/screen/order_receive_screen.dart';
+import '../../features/order/presentation/screen/order_reposatory_screen.dart';
+import '../../features/order/presentation/screen/order_send_screen.dart';
+import '../../features/order/presentation/screen/orders_type_screen.dart';
+import '../../pharma_screen.dart';
 
 class RouterService {
   final CacheService _cacheService;
@@ -55,7 +55,7 @@ class RouterService {
     String initialLocation = _cacheService.getData<String>(
           key: AppKeys.initialLocationRoute,
         ) ??
-        AppRoutes.onBoardingScreen;
+        AppRoutes.mainScreen;
     router = GoRouter(
       routes: [
         //-------------------------------------------

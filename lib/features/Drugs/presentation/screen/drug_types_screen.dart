@@ -1,9 +1,10 @@
 import 'package:pharma_app/core/enums/type_show_drug.dart';
 import 'package:pharma_app/core/widgets/PrimaryAbbpar.dart';
 import 'package:pharma_app/core/widgets/primary_arrow_button.dart';
-import 'package:pharma_app/features/pharmacy/PharmacyWidget/pharmacy_list_drugs.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import '../../../../core/widgets/PharmacyWidget/pharmacy_list_drugs.dart';
 
 class DrugsTypesScreen extends StatelessWidget {
   const DrugsTypesScreen({super.key});

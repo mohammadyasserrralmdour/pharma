@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-import 'package:pharma_app/core/constants/app_colors.dart';
 import 'package:pharma_app/features/Auth/presentation/screen/register/cubit/registerr_cubit.dart';
 
 import '../../../../core/constants/app_routes.dart';

@@ -9,7 +9,6 @@ import 'package:pharma_app/core/widgets/primary_button.dart';
 import 'package:pharma_app/core/widgets/primary_text_field.dart';
 import 'package:pharma_app/core/widgets/vertical_and_horizantail_space.dart';
 import 'package:pharma_app/features/Auth/presentation/screen/reset/cubit/reset_cubit.dart';
-import 'package:pharma_app/features/Auth/presentation/widget/auth_reset_bloc_listener.dart';
 import 'package:pharma_app/features/Auth/presentation/widget/auth_top_widget.dart';
 
 import '../../../../../core/helpers/regex_validator.dart';

@@ -2,9 +2,10 @@
 
 import 'package:pharma_app/core/constants/app_routes.dart';
 import 'package:pharma_app/core/enums/type_show_drug.dart';
-import 'package:pharma_app/features/pharmacy/features/Drugs/presentation/widget/drug_item_type.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+
+import '../../../features/Drugs/presentation/widget/drug_item_type.dart';
 
 class PharmacyListDrugs extends StatelessWidget {
   final DrugsShowType drugsShowType ;

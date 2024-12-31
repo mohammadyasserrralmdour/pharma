@@ -4,11 +4,12 @@ import 'package:pharma_app/core/enums/type_show_drug.dart';
 import 'package:pharma_app/core/widgets/PrimaryAbbpar.dart';
 import 'package:pharma_app/core/widgets/primary_arrow_button.dart';
 import 'package:pharma_app/core/widgets/primary_text_field.dart';
-import 'package:pharma_app/features/pharmacy/features/Drugs/presentation/widget/pharmacy_text_title.dart';
-import 'package:pharma_app/features/pharmacy/PharmacyWidget/pharmacy_list_drugs.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
+
+import '../../../../core/widgets/PharmacyWidget/pharmacy_list_drugs.dart';
+import '../../../Drugs/presentation/widget/pharmacy_text_title.dart';
 
 class OrederCreateScreen extends StatelessWidget {
   const OrederCreateScreen({super.key});

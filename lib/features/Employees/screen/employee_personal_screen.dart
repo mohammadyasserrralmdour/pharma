@@ -8,10 +8,10 @@ import 'package:pharma_app/core/constants/app_routes.dart';
 import 'package:pharma_app/core/widgets/PrimaryAbbpar.dart';
 import 'package:pharma_app/core/widgets/primary_arrow_button.dart';
 import 'package:pharma_app/core/widgets/vertical_and_horizantail_space.dart';
-import 'package:pharma_app/features/pharmacy/PharmacyWidget/pharmacy_text_font_types.dart';
-import 'package:pharma_app/features/pharmacy/features/Drugs/presentation/widget/pharmacy_text_title.dart';
-import 'package:pharma_app/features/pharmacy/features/Employees/widget/employee_personal_box.dart';
-import 'package:pharma_app/features/pharmacy/features/Employees/widget/employee_personal_sales.dart';
+
+import '../../Drugs/presentation/widget/pharmacy_text_title.dart';
+import '../widget/employee_personal_box.dart';
+import '../widget/employee_personal_sales.dart';
 
 class EmployeePersonalScreen extends StatelessWidget {
   const EmployeePersonalScreen({super.key});

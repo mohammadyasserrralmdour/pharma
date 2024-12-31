@@ -1,10 +1,10 @@
 
 
-import 'package:pharma_app/features/pharmacy/PharmacyWidget/pharmacy_text_font_types.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../../../../core/widgets/vertical_and_horizantail_space.dart';
+import '../../../../../../../core/widgets/vertical_and_horizantail_space.dart';
+import '../../../../core/widgets/PharmacyWidget/pharmacy_text_font_types.dart';
 
 class SalesDateAndTotalprice extends StatelessWidget {
   final String date;

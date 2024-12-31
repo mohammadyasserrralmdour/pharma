@@ -9,8 +9,8 @@ import 'package:pharma_app/core/constants/app_routes.dart';
 import 'package:pharma_app/core/widgets/PrimaryAbbpar.dart';
 import 'package:pharma_app/core/widgets/primary_arrow_button.dart';
 import 'package:pharma_app/core/widgets/vertical_and_horizantail_space.dart';
-import 'package:pharma_app/features/pharmacy/PharmacyWidget/pharmacy_text_font_types.dart';
-import 'package:pharma_app/features/pharmacy/features/Employees/widget/employees_list_informations.dart';
+
+import '../widget/employees_list_informations.dart';
 
 class EmployeesInformationsScreen extends StatelessWidget {
   const EmployeesInformationsScreen({super.key});

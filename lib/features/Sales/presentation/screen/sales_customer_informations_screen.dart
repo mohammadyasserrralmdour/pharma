@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pharma_app/core/widgets/primary_arrow_button.dart';
-import 'package:pharma_app/features/pharmacy/PharmacyWidget/pharmacy_dailog.dart';
-import 'package:pharma_app/features/pharmacy/PharmacyWidget/pharmacy_text_font_types.dart';
-import 'package:pharma_app/features/pharmacy/features/Sales/presentation/widget/sales_invoices_list.dart';
 
-import '../../../../../../core/widgets/PrimaryAbbpar.dart';
-import '../../../../../../core/widgets/vertical_and_horizantail_space.dart';
+import '../../../../../../../core/widgets/PrimaryAbbpar.dart';
+import '../../../../../../../core/widgets/vertical_and_horizantail_space.dart';
+import '../../../../core/widgets/PharmacyWidget/pharmacy_dailog.dart';
+import '../../../../core/widgets/PharmacyWidget/pharmacy_text_font_types.dart';
+import '../widget/sales_invoices_list.dart';
 
 class SalesCustomerInformationsScreen extends StatelessWidget {
   const SalesCustomerInformationsScreen({super.key});

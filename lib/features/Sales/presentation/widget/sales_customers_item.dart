@@ -4,7 +4,8 @@ import 'package:flutter_svg/svg.dart';
 import 'package:pharma_app/core/constants/app_assets.dart';
 import 'package:pharma_app/core/constants/app_colors.dart';
 import 'package:pharma_app/core/widgets/vertical_and_horizantail_space.dart';
-import 'package:pharma_app/features/pharmacy/PharmacyWidget/pharmacy_text_font_types.dart';
+
+import '../../../../core/widgets/PharmacyWidget/pharmacy_text_font_types.dart';
 
 class SalesCustomersItem extends StatelessWidget {
   const SalesCustomersItem({super.key});

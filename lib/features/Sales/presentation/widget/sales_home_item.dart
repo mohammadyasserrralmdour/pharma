@@ -7,7 +7,8 @@ import 'package:pharma_app/core/constants/app_colors.dart';
 import 'package:pharma_app/core/constants/app_routes.dart';
 import 'package:pharma_app/core/widgets/secondary_button.dart';
 import 'package:pharma_app/core/widgets/vertical_and_horizantail_space.dart';
-import 'package:pharma_app/features/pharmacy/features/Drugs/presentation/widget/pharmacy_text_title.dart';
+
+import '../../../Drugs/presentation/widget/pharmacy_text_title.dart';
 
 class SalesHomeBox extends StatelessWidget {
   const SalesHomeBox({super.key});

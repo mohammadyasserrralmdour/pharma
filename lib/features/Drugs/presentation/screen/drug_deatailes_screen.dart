@@ -2,10 +2,11 @@ import 'package:pharma_app/core/constants/app_colors.dart';
 import 'package:pharma_app/core/widgets/PrimaryAbbpar.dart';
 import 'package:pharma_app/core/widgets/primary_arrow_button.dart';
 import 'package:pharma_app/core/widgets/vertical_and_horizantail_space.dart';
-import 'package:pharma_app/features/pharmacy/PharmacyWidget/pharmacy_dailog.dart';
-import 'package:pharma_app/features/pharmacy/PharmacyWidget/pharmacy_text_font_types.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import '../../../../core/widgets/PharmacyWidget/pharmacy_dailog.dart';
+import '../../../../core/widgets/PharmacyWidget/pharmacy_text_font_types.dart';
 
 class DrugDeatailesScreen extends StatelessWidget {
   const DrugDeatailesScreen({super.key});

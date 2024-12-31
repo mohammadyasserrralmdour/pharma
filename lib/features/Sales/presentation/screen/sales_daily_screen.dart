@@ -2,11 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pharma_app/core/widgets/PrimaryAbbpar.dart';
 import 'package:pharma_app/core/widgets/vertical_and_horizantail_space.dart';
-import 'package:pharma_app/features/pharmacy/PharmacyWidget/pharmacy_text_font_types.dart';
-import 'package:pharma_app/features/pharmacy/features/Sales/presentation/widget/sales_daily_customers_button.dart';
-import 'package:pharma_app/features/pharmacy/features/Sales/presentation/widget/sales_daily_list.dart';
-import 'package:pharma_app/features/pharmacy/features/Sales/presentation/widget/sales_date_and_totalprice_widget.dart';
-import 'package:pharma_app/features/pharmacy/features/Sales/presentation/widget/sales_textformfield.dart';
+
+import '../../../../core/widgets/PharmacyWidget/pharmacy_text_font_types.dart';
+import '../widget/sales_daily_customers_button.dart';
+import '../widget/sales_daily_list.dart';
+import '../widget/sales_date_and_totalprice_widget.dart';
+import '../widget/sales_textformfield.dart';
 
 // ignore: must_be_immutable
 class SalesDailyScreen extends StatelessWidget {

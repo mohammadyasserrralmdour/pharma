@@ -6,7 +6,6 @@ import 'package:logger/web.dart';
 import 'package:pharma_app/core/helpers/failures.dart';
 import 'package:pharma_app/features/Auth/domain/usescase/auth_register_usescase.dart';
 import 'package:pharma_app/features/Auth/domain/usescase/auth_send_code_usescase.dart';
-import 'package:pharma_app/features/Auth/domain/usescase/auth_verify_code_usescase.dart';
 import 'package:pharma_app/injection_container.dart';
 
 part 'registerr_cubit.freezed.dart';

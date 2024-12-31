@@ -1,10 +1,11 @@
 import 'package:pharma_app/core/widgets/PrimaryAbbpar.dart';
 import 'package:pharma_app/core/widgets/vertical_and_horizantail_space.dart';
-import 'package:pharma_app/features/pharmacy/features/Drugs/presentation/widget/pharmacy_text_title.dart';
-import 'package:pharma_app/features/pharmacy/features/order/presentation/widget/order_all_box.dart';
-import 'package:pharma_app/features/pharmacy/features/order/presentation/widget/order_opareations.dart';
-import 'package:pharma_app/features/pharmacy/features/order/presentation/widget/order_reposatories.dart';
 import 'package:flutter/material.dart';
+
+import '../../../Drugs/presentation/widget/pharmacy_text_title.dart';
+import '../widget/order_all_box.dart';
+import '../widget/order_opareations.dart';
+import '../widget/order_reposatories.dart';
 
 class OrderHomeScreen extends StatelessWidget {
   const OrderHomeScreen({super.key});

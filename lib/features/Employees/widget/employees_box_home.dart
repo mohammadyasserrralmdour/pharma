@@ -5,7 +5,8 @@ import 'package:go_router/go_router.dart';
 import 'package:pharma_app/core/constants/app_assets.dart';
 import 'package:pharma_app/core/constants/app_box_decoration.dart';
 import 'package:pharma_app/core/constants/app_routes.dart';
-import 'package:pharma_app/features/pharmacy/PharmacyWidget/pharmacy_text_font_types.dart';
+
+import '../../../core/widgets/PharmacyWidget/pharmacy_text_font_types.dart';
 
 class EmployeesBoxHome extends StatelessWidget {
   const EmployeesBoxHome({super.key});

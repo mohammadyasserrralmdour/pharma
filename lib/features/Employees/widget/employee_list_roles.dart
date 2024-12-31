@@ -3,10 +3,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pharma_app/core/constants/app_assets.dart';
 import 'package:pharma_app/core/widgets/vertical_and_horizantail_space.dart';
-import 'package:pharma_app/features/pharmacy/PharmacyWidget/pharmacy_dailog.dart';
-import 'package:pharma_app/features/pharmacy/PharmacyWidget/pharmacy_text_font_types.dart';
 
 import '../../../../../core/constants/app_box_decoration.dart';
+import '../../../core/widgets/PharmacyWidget/pharmacy_dailog.dart';
+import '../../../core/widgets/PharmacyWidget/pharmacy_text_font_types.dart';
 
 class EmployeeListRoles extends StatelessWidget {
   const EmployeeListRoles({super.key});

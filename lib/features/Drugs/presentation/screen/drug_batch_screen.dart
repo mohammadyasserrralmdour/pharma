@@ -1,12 +1,13 @@
 import 'package:pharma_app/core/widgets/PrimaryAbbpar.dart';
 import 'package:pharma_app/core/widgets/primary_arrow_button.dart';
 import 'package:pharma_app/core/widgets/vertical_and_horizantail_space.dart';
-import 'package:pharma_app/features/pharmacy/PharmacyWidget/pharmacy_dailog.dart';
-import 'package:pharma_app/features/pharmacy/PharmacyWidget/pharmacy_text_font_types.dart';
-import 'package:pharma_app/features/pharmacy/features/Drugs/presentation/widget/drug_batch_box.dart';
-import 'package:pharma_app/features/pharmacy/features/Drugs/presentation/widget/drug_brand_scientafic_name.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import '../../../../core/widgets/PharmacyWidget/pharmacy_dailog.dart';
+import '../../../../core/widgets/PharmacyWidget/pharmacy_text_font_types.dart';
+import '../widget/drug_batch_box.dart';
+import '../widget/drug_brand_scientafic_name.dart';
 
 class DrugBatchScreen extends StatelessWidget {
   const DrugBatchScreen({super.key});

@@ -3,10 +3,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:pharma_app/core/widgets/PrimaryAbbpar.dart';
 import 'package:pharma_app/core/widgets/primary_arrow_button.dart';
-import 'package:pharma_app/features/pharmacy/PharmacyWidget/pharmacy_dailog.dart';
-import 'package:pharma_app/features/pharmacy/features/Sales/presentation/widget/sales_customers_item.dart';
 
-import '../../../../../../core/constants/app_routes.dart';
+import '../../../../../../../core/constants/app_routes.dart';
+import '../../../../core/widgets/PharmacyWidget/pharmacy_dailog.dart';
+import '../widget/sales_customers_item.dart';
 
 class SalesAllCustomersScreen extends StatelessWidget {
   const SalesAllCustomersScreen({super.key});

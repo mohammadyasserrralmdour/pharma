@@ -3,13 +3,14 @@ import 'package:pharma_app/core/constants/app_colors.dart';
 import 'package:pharma_app/core/widgets/PrimaryAbbpar.dart';
 import 'package:pharma_app/core/widgets/primary_arrow_button.dart';
 import 'package:pharma_app/core/widgets/vertical_and_horizantail_space.dart';
-import 'package:pharma_app/features/pharmacy/features/Drugs/presentation/widget/pharmacy_text_title.dart';
-import 'package:pharma_app/features/pharmacy/features/mointoring/widget/monitoring_date_range_picker.dart';
-import 'package:pharma_app/features/pharmacy/features/mointoring/widget/monitoring_stock_report.dart';
-import 'package:pharma_app/features/pharmacy/features/mointoring/widget/monitoring_text_form_filed.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+
+import '../../Drugs/presentation/widget/pharmacy_text_title.dart';
+import '../widget/monitoring_date_range_picker.dart';
+import '../widget/monitoring_stock_report.dart';
+import '../widget/monitoring_text_form_filed.dart';
 
 class MonitoringSubactionScreen extends StatefulWidget {
   const MonitoringSubactionScreen({super.key});

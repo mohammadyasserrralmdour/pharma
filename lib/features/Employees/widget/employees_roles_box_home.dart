@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
-import 'package:pharma_app/features/pharmacy/PharmacyWidget/pharmacy_text_font_types.dart';
 
 import '../../../../../core/constants/app_assets.dart';
 import '../../../../../core/constants/app_box_decoration.dart';
 import '../../../../../core/constants/app_routes.dart';
+import '../../../core/widgets/PharmacyWidget/pharmacy_text_font_types.dart';
 
 class EmployeesRolesBoxHome extends StatelessWidget {
   const EmployeesRolesBoxHome({super.key});

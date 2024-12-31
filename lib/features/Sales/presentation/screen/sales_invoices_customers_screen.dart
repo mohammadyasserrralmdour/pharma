@@ -1,9 +1,10 @@
 import 'package:pharma_app/core/widgets/PrimaryAbbpar.dart';
 import 'package:pharma_app/core/widgets/vertical_and_horizantail_space.dart';
-import 'package:pharma_app/features/pharmacy/features/Sales/presentation/widget/sales_daily_customers_button.dart';
-import 'package:pharma_app/features/pharmacy/features/Sales/presentation/widget/sales_invoices_list.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import '../widget/sales_daily_customers_button.dart';
+import '../widget/sales_invoices_list.dart';
 
 // ignore: must_be_immutable
 class SalesInvoicesCustomersScreen extends StatelessWidget {

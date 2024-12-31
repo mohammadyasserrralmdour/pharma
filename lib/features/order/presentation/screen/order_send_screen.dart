@@ -3,12 +3,13 @@ import 'package:pharma_app/core/enums/type_show_drug.dart';
 import 'package:pharma_app/core/widgets/PrimaryAbbpar.dart';
 import 'package:pharma_app/core/widgets/primary_arrow_button.dart';
 import 'package:pharma_app/core/widgets/vertical_and_horizantail_space.dart';
-import 'package:pharma_app/features/pharmacy/features/Drugs/presentation/widget/pharmacy_text_title.dart';
-import 'package:pharma_app/features/pharmacy/PharmacyWidget/pharmacy_list_drugs.dart';
-import 'package:pharma_app/features/pharmacy/features/order/presentation/widget/order_speceification.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
+
+import '../../../../core/widgets/PharmacyWidget/pharmacy_list_drugs.dart';
+import '../../../Drugs/presentation/widget/pharmacy_text_title.dart';
+import '../widget/order_speceification.dart';
 
 class OrderSendScreen extends StatelessWidget {
   const OrderSendScreen({super.key});

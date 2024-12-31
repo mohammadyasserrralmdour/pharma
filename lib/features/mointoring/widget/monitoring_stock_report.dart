@@ -1,5 +1,6 @@
-import 'package:pharma_app/features/pharmacy/PharmacyWidget/pharmacy_text_font_types.dart';
 import 'package:flutter/widgets.dart';
+
+import '../../../core/widgets/PharmacyWidget/pharmacy_text_font_types.dart';
 
 class StockReport extends StatelessWidget {
   const StockReport({super.key});

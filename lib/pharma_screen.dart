@@ -1,10 +1,11 @@
 import 'package:pharma_app/features/main/presentation/widgets/bottom_navbar.dart';
-import 'package:pharma_app/features/pharmacy/features/Drugs/presentation/screen/drug_home_screen.dart';
-import 'package:pharma_app/features/pharmacy/features/Employees/screen/employee_home_screen.dart';
-import 'package:pharma_app/features/pharmacy/features/Sales/presentation/screen/sales_home_screen.dart';
-import 'package:pharma_app/features/pharmacy/features/mointoring/screen/monitoring_home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import 'features/Drugs/presentation/screen/drug_home_screen.dart';
+import 'features/Employees/screen/employee_home_screen.dart';
+import 'features/Sales/presentation/screen/sales_home_screen.dart';
+import 'features/mointoring/screen/monitoring_home_screen.dart';
 
 class PharmacyScreen extends StatefulWidget {
   const PharmacyScreen({super.key});

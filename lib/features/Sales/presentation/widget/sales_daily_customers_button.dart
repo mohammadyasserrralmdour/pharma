@@ -1,8 +1,9 @@
 import 'package:pharma_app/core/constants/app_colors.dart';
 import 'package:pharma_app/core/constants/app_text_styles.dart';
 import 'package:pharma_app/core/widgets/vertical_and_horizantail_space.dart';
-import 'package:pharma_app/features/pharmacy/features/Sales/presentation/cubit/sales_cubit.dart';
 import 'package:flutter/material.dart';
+
+import '../cubit/sales_cubit.dart';
 
 // ignore: must_be_immutable
 class DailyAndCustomersButton extends StatefulWidget {

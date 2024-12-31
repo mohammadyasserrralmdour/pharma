@@ -1,7 +1,8 @@
 
 
 import 'package:flutter/material.dart';
-import 'package:pharma_app/features/pharmacy/PharmacyWidget/pharmacy_text_font_types.dart';
+
+import '../../../core/widgets/PharmacyWidget/pharmacy_text_font_types.dart';
 
 class MonitoringStockInformatios extends StatelessWidget {
   const MonitoringStockInformatios({super.key});

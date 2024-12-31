@@ -2,9 +2,10 @@ import 'package:pharma_app/core/constants/app_box_decoration.dart';
 import 'package:pharma_app/core/widgets/PrimaryAbbpar.dart';
 import 'package:pharma_app/core/widgets/primary_arrow_button.dart';
 import 'package:pharma_app/core/widgets/vertical_and_horizantail_space.dart';
-import 'package:pharma_app/features/pharmacy/features/Drugs/presentation/widget/pharmacy_text_title.dart';
-import 'package:pharma_app/features/pharmacy/features/order/presentation/widget/order_information.dart';
 import 'package:flutter/material.dart';
+
+import '../../../Drugs/presentation/widget/pharmacy_text_title.dart';
+import '../widget/order_information.dart';
 
 class OrdersTypeScreen extends StatelessWidget {
   const OrdersTypeScreen({super.key});

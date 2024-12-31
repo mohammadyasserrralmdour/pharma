@@ -1,8 +1,9 @@
 import 'package:pharma_app/core/constants/app_colors.dart';
 import 'package:pharma_app/core/constants/app_text_styles.dart';
-import 'package:pharma_app/features/pharmacy/PharmacyWidget/pharmacy_text_font_types.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import '../../../../core/widgets/PharmacyWidget/pharmacy_text_font_types.dart';
 
 // ignore: must_be_immutable
 class SalesInvoicesList extends StatelessWidget {

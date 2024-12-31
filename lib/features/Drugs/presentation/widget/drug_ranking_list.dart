@@ -1,9 +1,10 @@
 
 
 import 'package:pharma_app/core/constants/app_routes.dart';
-import 'package:pharma_app/features/pharmacy/features/Drugs/presentation/widget/drug_item_home.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+
+import 'drug_item_home.dart';
 
 class DrugsRankingList extends StatelessWidget {
   const DrugsRankingList({super.key});

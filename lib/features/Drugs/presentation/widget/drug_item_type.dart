@@ -2,9 +2,10 @@ import 'package:pharma_app/core/constants/app_assets.dart';
 import 'package:pharma_app/core/constants/app_box_decoration.dart';
 import 'package:pharma_app/core/constants/app_colors.dart';
 import 'package:pharma_app/core/enums/type_show_drug.dart';
-import 'package:pharma_app/features/pharmacy/PharmacyWidget/pharmacy_text_font_types.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+
+import '../../../../core/widgets/PharmacyWidget/pharmacy_text_font_types.dart';
 
 class DrugItem extends StatelessWidget {
   final DrugsShowType drugsShowType;

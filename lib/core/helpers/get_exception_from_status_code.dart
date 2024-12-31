@@ -1,7 +1,5 @@
-import 'dart:convert';
 
 import 'package:dartz/dartz.dart';
-import 'package:http/http.dart';
 import 'package:pharma_app/core/helpers/exception.dart';
 
 Unit getExceptionStatusCode(int statusCode) {

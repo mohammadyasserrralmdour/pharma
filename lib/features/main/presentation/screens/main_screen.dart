@@ -4,14 +4,19 @@ import 'package:pharma_app/features/main/presentation/widgets/bottom_navbar.dart
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../../Drugs/presentation/screen/drug_home_screen.dart';
+import '../../../Employees/screen/employee_home_screen.dart';
+import '../../../Sales/presentation/screen/sales_home_screen.dart';
+import '../../../mointoring/screen/monitoring_home_screen.dart';
+
 class MainScreen extends StatelessWidget {
   MainScreen({super.key});
 
   final List<Widget> tabs = [
-    const HomeTab(),
-    const HomeTab(),
-    const HomeTab(),
-    const HomeTab(),
+    const DrugHomeScreen(),
+    const SalesHomeScreen(),
+    const EmployeeHomeScreen(),
+    const MonitoringHomeScreen(),
   ];
 
   @override
